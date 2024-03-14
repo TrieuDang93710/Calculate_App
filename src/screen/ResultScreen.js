@@ -12,22 +12,19 @@ const ResultScreen = () => {
     const deta = b * b - 4 * a * c;
 
     if (deta === 0) {
-      // textRs = `Phương trình vơi hệ số nhập vào vô số nghiêm: ${a}x^2 + ${b}x + ${c} = 0`;
       setTextRs(
         `Phương trình vơi hệ số nhập vào vô số nghiêm: ${a}x^2 + ${b}x + ${c} = 0 với nghiệm là: `
       );
-      result = (-b / 2) * a;
+      result = -b / (2 * a);
       setResult(result);
     } else {
       if (deta < 0) {
-        // textRs = `Phương trình vơi hệ số nhập vào vô nghiêm: ${a}x^2 + ${b}x + ${c} = 0`;
         setTextRs(
           `Phương trình vơi hệ số nhập vào vô nghiêm: ${a}x^2 + ${b}x + ${c} = 0`
         );
       } else {
-        // textRs = `Phương trình vơi hệ số nhập vào có hai nghiệm phân biệt: ${a}x^2 + ${b}x + ${c} = 0`;
-        const x1 = ((-deta - b) / 2) * a;
-        const x2 = ((-deta + b) / 2) * a;
+        const x1 = (-deta - b) / (2 * a);
+        const x2 = (-deta + b) / (2 * a);
         setTextRs(
           `Phương trình vơi hệ số nhập vào có hai nghiệm phân biệt: ${a}x^2 + ${b}x + ${c} = 0 với nghiệm là:  x1 = ${x1}; x2 = ${x2}`
         );
